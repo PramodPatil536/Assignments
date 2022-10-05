@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <title>sum of any number of arguments</title>
+</head>
+<body>
+    <h1 id="Args"></h1>
+    <script>
+        let d=0;
+        addAll(1,2,3,4,5);
+        function addAll(){
+            for(let i in arguments)
+            {
+                d=d+arguments[i];
+            }
+            document.getElementById("Args").innerHTML='After addition='+d;
+        }
+    </script>
+</body>
+</html>

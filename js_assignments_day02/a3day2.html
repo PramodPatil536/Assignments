@@ -1,0 +1,17 @@
+<html>
+<body>
+<h1 id="Args"></h1>
+<h2 id="Num"></h2>
+<script>
+    args(1,2,3,4,5)
+	function args(...args){
+		document.getElementById("Num").innerHTML="Number of arguments "+args.length;
+		for(let i in args)
+		{
+			document.getElementById("Args").innerHTML = "Argument "+i+" : "+args[i];
+		}
+	}
+    
+</script>
+</body>
+</html>

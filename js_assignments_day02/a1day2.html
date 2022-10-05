@@ -1,0 +1,22 @@
+<html>
+<body>
+<h1 id="ww"></h1>
+<script>
+    let data = prompt("Enter a number");
+	let inp = fact(data);
+    document.getElementById("ww").innerHTML="Factorial of "+data+" is "+inp;
+	
+	console.log(data);
+    function fact(num)
+    {
+        if(num==2)
+        {
+            return 2;
+        }
+		else{
+			return num*fact(num-1);
+		}
+    }
+</script>
+</body>
+</html>

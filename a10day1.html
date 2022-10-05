@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+    <title>digit repeatation count</title>
+</head>
+
+<body>
+    <script>
+        function countDigit(n)
+        {
+            var count=0;
+            if(n>=1) ++count;
+
+            while(n/10 >= 1)
+            {
+                n/=10;
+                ++count;
+            }
+            return count;
+        }
+
+        const a=prompt('enter a integer: ');
+
+        console.log(countDigit(a));
+        document.write('total digits are: '+countDigit(a));
+    </script>
+</body>
+
+</html>

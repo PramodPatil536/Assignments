@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        h1 {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="msg"></h1>
+    <form id="form">
+        <label>Email :</label><input type="text" id="email">
+		<input type="button" id="add" value="Add email" onclick="addMail()">
+    </form>
+
+    <script>
+		function addMail(){
+			const form = document.getElementById('form');
+			form.removeChild(form.children[2]);
+			const a = document.createElement('input');
+			a.setAttribute('id','in1');
+			a.setAttribute('type','text');
+			document.getElementById('form').appendChild(a);
+			const b = document.createElement('input');
+			b.setAttribute('id','btn2');
+			b.setAttribute('type','button');
+			b.setAttribute('value','Remove Email');
+			b.setAttribute('onclick','removeMail()');
+			document.getElementById('form').appendChild(b);
+		}
+		function removeMail(){
+			const form = document.getElementById('form');
+			form.removeChild(form.children[3]);
+			form.removeChild(form.children[2]);
+			const b = document.createElement('input');
+			b.setAttribute('id','add');
+			b.setAttribute('type','button');
+			b.setAttribute('value','Add Email');
+			b.setAttribute('onclick','addMail()');
+			document.getElementById('form').appendChild(b);
+		}
+    </script>
+
+</body>
+
+</html>

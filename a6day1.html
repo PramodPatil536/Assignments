@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <title>sum of even numbers from a array</title>
+</head>
+<body>
+    <script>
+        let a=[1,3,5,7,9,11,2,4,6,8];
+        let b=0;
+        for(var i=0;i<=a.length;i++)
+        {
+            if(a[i]%2 == 0)
+            {
+                b+=a[i];
+            }
+        }
+        if(b==0)
+        {
+            console.log('No even numbers found');
+        }
+        document.write(b+'<br>');
+    </script>
+</body>
+</html>

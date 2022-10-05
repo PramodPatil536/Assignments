@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Vehicle</title>
+</head>
+
+<body>
+
+    <p>Here Object Details will be shown!!</p>
+
+    <script>
+
+        setTimeout(
+            () => document.write(JSON.stringify(vehicle)), 2000
+        )
+
+
+        let vehicle = {
+            vehicle: "KA 29 L 5105",
+            brand: "Hero Honda",
+            Model: "7.0.1",
+            Variant: " hero",
+            specifications: {
+                gearOne() {
+                    console.log("Speed limit is 20km/hr");
+                },
+                gearTwo() {
+                    console.log("Speed limit is 40km/hr");
+                },
+                maxSpeed: "150km/hr",
+                changeGear() {
+                    console.log(Object.specifications.maxSpeed);
+                    Object.specifications.gearOne();
+                    Object.specifications.gearTwo();
+                }
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

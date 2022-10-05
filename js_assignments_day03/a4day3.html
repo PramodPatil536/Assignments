@@ -1,0 +1,72 @@
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        h1 {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <select id="contry" onChange="call()">
+		<option>India</option>
+		<option>Australia</option>
+		<option>New Zealand</option>
+		<option>England</option>
+	</select><br><br><br><br>
+	<select id="1" style="display:block">
+		<option>Bengaluru</option>
+		<option>Mumbai</option>
+		<option>Pune</option>
+		<option>Delhi</option>
+	</select>
+	<select id="2" style="display:none">
+		<option>Melborn</option>
+		<option>Sydney</option>
+		<option>Canbera</option>
+	</select>
+	<select id="3" style="display:none">
+		<option>Welington</option>
+		<option>Hamilton</option>
+		<option>Toranga</option>
+		<option>Duenadin</option>
+	</select>
+	<select id="4" style="display:none">
+		<option>London</option>
+		<option>Balifast</option>
+		<option>Bermingham</option>
+	</select>
+	
+	
+    <script>
+	let d=1;
+		function call(){
+			document.getElementById(d).style.display="none";
+			if(document.getElementById("contry").value=="Australia")
+			{
+				document.getElementById("2").style.display="block";
+				d=2;
+			}
+			else if(document.getElementById("contry").value=="New Zealand")
+			{
+				document.getElementById("3").style.display="block";
+				d=3;
+			}
+			else if(document.getElementById("contry").value=="England")
+			{
+				document.getElementById("4").style.display="block";
+				d=4;
+			}
+			else if(document.getElementById("contry").value=="India")
+			{
+				document.getElementById("1").style.display="block";
+				d=1;
+			}
+		}
+    </script>
+
+</body>
+
+</html>

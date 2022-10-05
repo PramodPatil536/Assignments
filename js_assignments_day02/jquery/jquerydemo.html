@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title>JQuery demo</title>
+    <script src="jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <p id="p1">click me</p>
+    <p id="p2">again click me</p>
+
+    <button id="btn">click to show paragraphs</button>
+    <script>
+        //  $('p').click(function(){
+        //      $(this).hide(5000);
+        //  });
+         $('#btn').click(function(){
+             $('p').show(3000);
+        });
+        $("p").dblclick(function(){
+        $(this).hide();
+        });
+    </script>
+</body>
+</html>

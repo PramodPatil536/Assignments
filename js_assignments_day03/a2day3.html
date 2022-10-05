@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        h1 {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="msg"></h1>
+    <form>
+        <label>Username :</label><input onblur="tabCheck()" oninput="checkCredentials(event,1)" type="text" id="usr"><br>
+        <span style="color:red;" id="span1"></span><br/>
+		<label>Password :</label><input  onblur="tabCheck()" oninput="checkCredentials(event,2)" type="text" id="pwd"><br>
+        <span style="color:red;" id="span2"></span><br/>
+		<input type="button" value="Sign In" id="btn" onClick="checkCredentials()" disabled=""><br/>
+    </form>
+
+    <script>
+	function tabCheck(){
+		  let val1 = document.getElementById("usr").value;
+            let val2 = document.getElementById("pwd").value;
+            let a = val1.toLowerCase();
+            let b = val2.toLowerCase();
+		if (a == 'citiustech' && b == 'citiustech') {
+				document.getElementById("msg").innerHTML = 'Correct credentials';
+                window.open('https://www.google.com/?gws_rd=ssl', 'winname','directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=400,height=350');
+			}
+		else {
+			document.getElementById("msg").innerHTML = 'Invalid credentials';
+		}
+	}
+        function checkCredentials(event,flag) {
+			let val1 = document.getElementById("usr").value;
+            let val2 = document.getElementById("pwd").value;
+            let a = val1.toLowerCase();
+            let b = val2.toLowerCase();
+			console.log(a,b);
+			document.getElementById("span1").innerHTML="";
+			document.getElementById("span2").innerHTML="";
+			if(a!="" && b!="")
+			{
+				document.getElementById("btn").disabled=false;
+			}
+			else{
+				document.getElementById("btn").disabled=true;
+			}
+			if(event.data==" ")
+			{
+				if(flag==1)
+				{
+					document.getElementById("span1").innerHTML="Space character detected";
+				}
+				else{
+					document.getElementById("span2").innerHTML="Space character detected";
+				}
+			}
+        }
+    </script>
+
+</body>
+
+</html>
+

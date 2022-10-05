@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+    <title>vowel repeatation count</title>
+</head>
+
+<body>
+    <script>
+        function countVowel(str)
+        {
+            const count=str.match(/[aeiou]/gi).length;
+
+            return count;
+        }
+
+        const string=prompt('enter a string: ');
+        const result=countVowel(string);
+
+        console.log(result);
+        document.write('total vowels are: '+result);
+    </script>
+</body>
+
+</html>

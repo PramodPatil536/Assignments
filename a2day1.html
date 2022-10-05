@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <title>Integer reverse</title>
+    <script>
+        let a=parseInt(prompt("enter the number you want to reverse"));
+        var rev=0;
+        var lastdigit;
+
+        while(a != 0)
+        {
+            lastdigit=a%10;
+            rev=rev*10+lastdigit;
+            a=Math.floor(a/10);
+        }
+        document.write("the reversed digit is"+rev)
+    </script>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        h1 {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="msg"></h1>
+    <form>
+        <label>Username :</label><input type="text" id="usr"><br><br>
+        <label>Password :</label><input type="text" id="pwd"><br>
+        <input type="button" value="SignIn" id="btn" onclick="checkCredentials()"><br>
+    </form>
+
+    <script>
+        function checkCredentials() {
+            let val1 = document.getElementById("usr").value;
+            let val2 = document.getElementById("pwd").value;
+            let a = val1.toLowerCase();
+            let b = val2.toLowerCase();
+            if (a == 'citiustech' && b == 'citiustech') {
+                window.open('https://www.google.com/?gws_rd=ssl', 'winname','directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=400,height=350');
+            }
+            else {
+                msg.innerHTML = 'Invalid credentials';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
