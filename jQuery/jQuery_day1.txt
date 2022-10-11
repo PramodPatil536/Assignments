@@ -1,0 +1,158 @@
+//jquery assignments
+//day 1
+
+assignment-1
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    Email:<input type="text" id="email" placeholder="enter your email id"><br><br>
+    <button type="button" id="btn">show Email</button><br><br>
+    <div id="div" style="height: 20px;background-color:aqua;padding: 10px;width: 20%;"></div>
+    <script>
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                let res = document.getElementById('email').value;
+                $('#div').text(res);
+            })
+        })
+
+    </script>
+
+</body>
+
+</html>
+
+
+//Assignment 2
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <input type="text"><br><br>
+    <input type="text"><br><br>
+    <div id="div1" style="height: 20px; width:400px ;background-color:rgb(166, 202, 35); padding: 10px;"></div><br><br>
+    <div id="div2" style="height: 20px; width:400px ;background-color:rgb(3, 53, 203); padding: 10px;"></div><br><br>
+    <div id="div3">
+        <textarea rows="3" cols="50"></textarea><br><br>
+        <textarea rows="3" cols="50"></textarea><br><br>
+    </div>
+    <button type="button" id="btn">Apply Style to TextBoxes</button>
+    <button type="button" id="bn1">Apply Style to first div </button>
+    <button type="button" id="bn2">Say Hello </button>
+    <script>
+        $(function () {
+            $('#btn').click(function () {
+                $('textarea').css({ "border": "solid 3px red" });
+            })
+        })
+        $(function () {
+            $('#bn1').click(function () {
+                $('#div1').text('Hello Ctzens');
+            });
+        });
+        $(function () {
+            $('#bn2').click(function () {
+                $('textarea').text('Say Hello!');
+            });
+        });
+        $(function () {
+            $('#bn2').click(function () {
+                $('input').val('Say Hello!');
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+Assignment-3
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <h4>Take Cursor on the link to open google homepage..</h4>
+    <p id="demo">Google.com</p>
+    <script>
+        $(function(){
+            $('#demo').mouseover(function(){
+                window.open("https://www.google.com");
+            })
+        })
+    </script>
+</body>
+</html>
+
+Assignment-4
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title></title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+   <style>
+    .error{
+        border-color: red;
+        background-color: yellow;
+    }
+   </style>
+</head>
+<body>
+    <input type="text" id="demo" placeholder="enter a number">
+    <script>
+        $(function(){
+          $('#demo').focusout(function(){
+            $(this).addClass("error");
+          })
+        },function(){
+            var data=document.getElementById('demo').value;
+            if(data>10){
+                $('#demo:gt(10)').addClass("error");
+            }
+        });
+    </script>
+
+</body>
+</html>
+
+Assignment-5
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <input type="text" id="text" onkeyup="manage(this)"/>
+    <button id="btsubmit" disabled="true">Login</button>
+    <script>
+        function manage(txt){
+            var bt=document.getElementById('btsubmit');
+            if(txt.value!=''){
+                bt.disabled =false;
+
+            }
+            else{
+                bt.disabled=true;
+            }
+        }
+    </script>
+</body>
+</html>

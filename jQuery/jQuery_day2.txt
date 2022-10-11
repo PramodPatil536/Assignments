@@ -1,0 +1,267 @@
+jQuery day2 assignments
+
+Assignment-1
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <a id="p1" href="www.example.com">Welcome to google</a><br><br>
+    <a id="p2" href="www.example.com">Welcome to gmail</a><br><br>
+    <a id="p3" href="www.example.com">Welcome to makemytrip</a>
+
+    <script>
+        $('#p1').attr("href", "http://www.google.com");
+        $('#p2').attr("href", "https://mail.google.com/mail/");
+        $('#p3').attr("href", "https://www.makemytrip.com/flights/airlines.html?ef_id=Y0GXXQAABX75HSF6:20221008152933:s");
+    </script>
+</body>
+
+</html>
+
+Assignment-2
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
+    <style>
+        .ui-widget-header,
+        .ui-button,
+        .ui-state-default {
+            background-color: gray;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style=" height: 100px; width: 100px; background-color: rgb(184, 184, 120); padding : 20px;"><br>
+        <p><b>The Dialog</b></p>
+        <button id="btn">click me!</button>
+    </div>
+
+    <div id="d1">Are yoou sure you want to do this?</div>
+    <script>
+        $(function () {
+            $('#d1').dialog({
+                autoOpen: false,
+                buttons: {
+                    'Yes I do!': function () { $(this).dialog("close"); },
+                    'NO': function () {$(this).dialog("close"); }
+                },
+                title: "Attention!!"
+            });
+            $('#btn').click(function () {
+                $('#d1').dialog("open");
+            })
+        });
+    </script>
+
+
+</body>
+
+</html>
+
+Assignment-3
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
+</head>
+
+<body>
+    <div style="background-color: rgb(198, 198, 142); padding: 20px; padding-right: 0px;">
+        <h1>The Accordion</h1>
+        <div id="acc">
+            <h1>jQuery</h1>
+            <div>
+                <p>jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top
+                    of the jQuery JavaScript Library..</p>
+            </div>
+
+            <h1>C</h1>
+            <div>
+                <p>C is a procedural programming language. It was initially developed by Dennis Ritchie as a system programming language to write operating system. </p>
+            </div>
+
+            <h1>Java</h1>
+            <div>
+                <p>Java has been one of the most popular programming languages for many years. Java is Object Oriented. However, it is not considered as pure object-oriented as it provides support for primitive data types (like int, char, etc) </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $('#acc').accordion();
+        });
+    </script>
+</body>
+
+</html>
+
+Assignment-4
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <style>
+        #div3, #div2 {
+            padding: 5px;
+            text-align: center;
+            background-color: #e9f362;
+            border: solid 1px #1e1717;
+        }
+
+        #div3 {
+            padding: 50px;
+            background-color: #afdd64;
+            display: none;
+        }
+
+        #div4 {
+            padding: 10px;
+            background-color: #b95ac2;
+            display: none;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>fadeIn....</h1>
+    <div id="div1" style="width:80px;height:80px;display:none;background-color:rgb(107, 225, 240);      padding: 20px;">I am
+        a hidden secret</div>
+    <button id="btn1">click to see</button><br><br>
+
+    <h1>slidedown....</h1>
+    <div id="div2">click here to slidedown...</div>
+    <div id="div3">Some content here...</div><br><br>
+
+    <button id="btn2">click here</button><br><br>
+    <div id="div4">Click me to toggle a hidden secret! </div>
+
+    <script>
+        $('#btn1').click(function () {
+            $('#div1').fadeIn('slow');
+        });
+
+        $('#div2').click(function () {
+            $('#div3').slideDown('slow');
+        });
+
+        $('#btn2').click(function () {
+            $('#div4').toggle('slow');
+        });  
+    </script>
+</body>
+
+</html>
+
+
+Assignment-4
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <style>
+        #div3, #div2 {
+            padding: 5px;
+            text-align: center;
+            background-color: #e9f362;
+            border: solid 1px #1e1717;
+        }
+
+        #div3 {
+            padding: 50px;
+            background-color: #afdd64;
+            display: none;
+        }
+
+        #div4 {
+            padding: 10px;
+            background-color: #b95ac2;
+            display: none;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>fadeIn....</h1>
+    <div id="div1" style="width:80px;height:80px;display:none;background-color:rgb(107, 225, 240);      padding: 20px;">I am
+        a hidden secret</div>
+    <button id="btn1">click to see</button><br><br>
+
+    <h1>slidedown....</h1>
+    <div id="div2">click here to slidedown...</div>
+    <div id="div3">Some content here...</div><br><br>
+
+    <button id="btn2">click here</button><br><br>
+    <div id="div4">Click me to toggle a hidden secret! </div>
+
+    <script>
+        $('#btn1').click(function () {
+            $('#div1').fadeIn('slow');
+        });
+
+        $('#div2').click(function () {
+            $('#div3').slideDown('slow');
+        });
+
+        $('#btn2').click(function () {
+            $('#div4').toggle('slow');
+        });  
+    </script>
+</body>
+
+</html>
+
+
+Assignment-5
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Document</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+<button id="clicker">Click me to hide the hidden secrets!</button> 
+<p class="secret">I am hidden secret #1.</p> 
+<p class="secret">I am hidden secret #2.</p> 
+<p class="secret">I am hidden secret #2.</p> 
+<p>I am <em>not</em> a hidden secret.</p> 
+
+<script>
+    $(function(){
+        $('#clicker').click(function(){
+            $('.secret').slideUp();
+        })
+    })
+</script>
+
+</body>
+</html>
