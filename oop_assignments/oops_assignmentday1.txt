@@ -1,0 +1,134 @@
+factorial_algorithm
+
+Step1: Start
+Step2: input a positive number from user
+Step3: initialise a variable to 1 // fact=1
+Step4: iterate from 1 to (n+1) using for loop 
+Step5: using fact=fact*1 calculate the factorial
+Step6: print output
+Step7: Stop
+
+factorial_pseudocode
+
+Begin
+	positive number from user
+	numeric n fact=1
+	iterate from 1 to (n+1) using for loop 
+	calculate fact=fact*i
+	print fact
+End
+
+primenumber_algorithm
+
+Step1: Start
+Step2: input numeric value from user
+Step3: if user input number is less than or equal to 1
+Step4: display given number is not prime number else goto step5.
+Step5: iterate from 2 to given number//for i in range(2,number).
+Step6: if number%i==0
+Step7: display given number is not prime number else go to step8.
+Step8: print given number is a prime number.
+Step9: End
+
+primenumber_pseudocode
+
+begin
+     numeric n,a
+     print "enter the number"
+     reading number from user
+     if n<=1
+         print "it is not a prime number"
+     for a in range(2,n)
+     Begin
+        if n%a==0
+        print "it is not a prime number"
+        else
+        print "It is a prime number"
+End
+
+reverse_algorithm
+
+Step1:Start
+Step2:input from user
+Step3:read number
+Step4:declare a variable called remainder
+Step5:initialise reverse=0
+Step6:while number is greater than or equal to 1 goto step 7
+Step7:calculate remainder=number/10
+Step8:calculate reverse=(reverse*10)+remainder
+Step9:number=number/10
+Step10:return reverse
+Step11:print reverse
+Step12:End
+
+reverse_pseudocode
+
+Begin
+	numeric number
+	print"enter the number"
+	initialise a variable reverse to zero
+	while Number>=1
+		begin
+		remainder=number%10
+		reverse=(reverse*10)+remainder
+		number=number/10
+		return reverse
+		end
+	print reverse
+End
+
+
+voting_algorithm
+
+Begin
+	numeric number
+	print"enter the number"
+	initialise a variable reverse to zero
+	while Number>=1
+		begin
+		remainder=number%10
+		reverse=(reverse*10)+remainder
+		number=number/10
+		return reverse
+		end
+	print reverse
+End
+
+voting_pseudocode
+
+     Begin
+	numeric age
+	print "enter your age"
+	if age>=18
+		print "person is eligible to vote"
+	else
+		print "person is not eligible to vote"
+      End
+
+vowels_algorithm
+
+Step1: Start
+Step2: initialise string str=CITIUSTECH
+Step3: set count=0
+Step4: convert string to lowercase str=str.toLowerCase()
+Step5: for(int i=0;i<str.length();i++)
+Step6: insert if condition within loop to check vowels
+Step7: if(str.CharAt(i)=="a"||str.CharAt(i)=="e"||str.CharAt(i)=="i"||str.CharAt(i)=="o"||str.CharAt(i)=="u"||)
+Step8: count++
+Step9: print count
+Step10: End
+
+vowels_pseudocode
+
+Begin
+	Set count=0
+	initialise string str=CITIUSTECH
+	convert string to lowercase str=str.toLowerCase()
+	for(int i=0;i<str.length();i++)
+	Begin
+		if(str.CharAt(i)=="a"||str.CharAt(i)=="e"||str.CharAt(i)=="i"||str.CharAt(i)=="o"||str.CharAt(i)=="u"||)
+		count++
+		print count
+	End
+End
+
