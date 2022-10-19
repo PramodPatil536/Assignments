@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            let userid=document.getElementById("userid").value;
+            let title=document.getElementById("title").value;
+            let comp=document.getElementById("completed").value;
+            if(userid!="" && title!="")
+            {
+                $.post("https://jsonplaceholder.typicode.com/todos",{userid:`${userid}`,id:"1",title:`${title}`,completed:`${comp }`},function(data,status){
+                    if(status=="success")
+                    {
+                        alert("Record added successfully");
+                    }
+                });
+            }
+        });
+    });
+</script>
+</head>
+<body>
+    <h1>Add records</h1>
+    <input type="text" id="userid"/><br/>
+    <input type="text" id="title"/><br/>
+    <input type="checkbox" id="completed"><br>
+    <button>Make a API call</button>
+</body>
+</html>

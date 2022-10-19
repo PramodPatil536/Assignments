@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $("button").click(function () {
+            $("#div1").load("a1a2day3.html",function(){
+                console.log('file loaded!');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="div1"></div>
+    <button>Display File</button>
+</body>
+</html>

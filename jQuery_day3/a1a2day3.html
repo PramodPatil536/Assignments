@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.get("https://jsonplaceholder.typicode.com/todos",function(data,status){
+                    if(status == "success")
+                    {
+                        document.write("<select>")
+                        for(let i of data)
+                        {
+                            document.write("<option>"+i.title+"</option>");
+                        }
+                        document.write("</select>");
+                    }
+                    else{
+                        alert("API call failed");
+                    }
+                })
+            })
+        })
+    </script>
+    <button>Make a API call</button>
+</body>
+</html>
